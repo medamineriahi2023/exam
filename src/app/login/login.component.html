@@ -1,0 +1,22 @@
+
+
+
+<div class="flex  justify-center items-center" style="width: 100vw; height:100vh ; display: flex ;flex-direction: column; align-items: center ; justify-content: center" >
+  <fieldset>
+    <legend>Authentification</legend>
+  <div class="w-1/4">
+    <div style="display: flex; justify-content: space-between ; align-items: center ;width: 300px">
+      <p>Login</p>
+      <input [(ngModel)]="login" style="height: 20px" type="text" placeholder="psudo">
+    </div>
+    <div style="display: flex; justify-content: space-between ; align-items: center ;width: 300px">
+      <p>password</p>
+      <input [(ngModel)]="password" style="height: 20px" type="password" placeholder="enter your password"></div>
+  </div>
+    <p style="color: red">{{alert}}</p>
+  <div style="display: flex; justify-content: center; margin-left: 20px">
+    <button type="submit" (click)="auth()">S'authentifier</button>
+  </div>
+  </fieldset>
+</div>
+
