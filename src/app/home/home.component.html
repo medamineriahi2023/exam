@@ -1,7 +1,8 @@
 <div>
   <ul>
     <li *ngFor="let offer of offres">
-      {{offer.title}} - Nombre de condidatures souhéter {{offer.nbCandidate}}
+      {{offer.title}} - Nombre de condidatures souhéter {{offer.nbCandidate}} <button [disabled]="offer.nbCandidate === 0" (click)="postuler(offer)">Postuler</button> <a [routerLink]="'/details/'+offer.id">details</a>
     </li>
   </ul>
 </div>
+<app-add-offer (emitted)="refresh()"></app-add-offer>

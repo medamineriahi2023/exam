@@ -3,17 +3,37 @@
     {
       "id": 1,
       "title": "Développeur Java",
+      "company": "Sofrecom",
+      "description": "cette offre est un offre bla bla bla ...",
       "nbCandidate": 0
     },
     {
       "id": 2,
       "title": "Développeur .NET",
-      "nbCandidate": 10
+      "company": "OGA",
+      "description": "cette offre est un offre bla bla bla ...",
+      "nbCandidate": 0
     },
     {
       "id": 3,
       "title": "Developpeur Angular",
-      "nbCandidate": 20
+      "company": "VERMEG",
+      "description": "cette offre est un offre bla bla bla ...",
+      "nbCandidate": 0
+    },
+    {
+      "title": "abc",
+      "company": "abc",
+      "description": "abc",
+      "nbCandidate": 190,
+      "id": 4
+    },
+    {
+      "title": "jkqfdsqf",
+      "company": "skqfjkdsfj",
+      "description": "qsdkfjskdqf",
+      "nbCandidate": "100",
+      "id": 5
     }
   ]
 }
