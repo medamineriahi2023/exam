@@ -12,7 +12,12 @@ export class HomeComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.recrutementService.getAllOffres().subscribe(e=> this.offres = e )
+      this.recrutementService.getAllOffres().subscribe(e=> this.offres = e );
+  }
+
+  updateCandidate(offer:any) {
+    offer.nbCandidate --;
+    this.recrutementService.updateOffer(offer.id, offer).subscribe(e => console.log(e));
   }
 
 }

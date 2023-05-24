@@ -2,6 +2,8 @@
   <ul>
     <li *ngFor="let offer of offres">
       {{offer.title}} - Nombre de condidatures souhéter {{offer.nbCandidate}}
+      <button [disabled]="offer.nbCandidate == 0" (click)="updateCandidate(offer)">Postuler</button>
+      <a [routerLink]="'/details/'+offer.id">détails</a>
     </li>
   </ul>
 </div>
