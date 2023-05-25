@@ -1,0 +1,45 @@
+<fieldset style="width: 500px">
+<h1>Ajouter une nouvelle offre</h1>
+
+  <form #ngForm="ngForm" >
+  <table>
+    <tr>
+      <td>Titre</td>
+      <td>
+        <input type="text" ngModel name="title" required minlength="3" pattern="[a-zA-Z]*">
+        <div *ngIf="ngForm?.controls['title']?.invalid && ngForm?.controls['title']?.touched">
+          <p style="color: red; font-size: 12px"  *ngIf="ngForm.controls['title'].errors['required']">title is required</p>
+          <p style="color: red; font-size: 12px"  *ngIf="ngForm.controls['title'].errors['pattern']">title must be alphabetic</p>
+          <p style="color: red; font-size: 12px"  *ngIf="ngForm.controls['title'].errors['minlength']">title must be more than 3 characters</p>
+        </div>
+      </td>
+
+    </tr>
+
+    <tr>
+      <td>Société</td>
+      <td><input type="text" ngModel name="company"></td>
+    </tr>
+
+    <tr>
+      <td>Description</td>
+      <td><input type="text" ngModel name="description"></td>
+    </tr>
+
+    <tr>
+      <td>Nombre de condidat(s) souhaité</td>
+      <td><input type="text" ngModel name="nbCandidate" pattern="[0-9]*">
+        <div *ngIf="ngForm?.controls['nbCandidate']?.invalid && ngForm?.controls['nbCandidate']?.touched">
+          <p style="color: red; font-size: 12px"  *ngIf="ngForm.controls['nbCandidate'].errors['pattern']">nbCnadidate must be numeric</p>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td><button (click)="onSubmit(ngForm.value)">Ajouter</button></td>
+    </tr>
+
+  </table>
+  </form>
+</fieldset>

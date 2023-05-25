@@ -24,5 +24,8 @@ export class RecrutementService {
     return this.http.get<Offer>("http://localhost:3000/posts/"+id);
   }
 
+  save(offer:Offer):Observable<Offer> {
+    return this.http.post<Offer>("http://localhost:3000/posts/", offer);
+  }
 
 }
